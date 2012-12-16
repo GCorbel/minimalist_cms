@@ -1,0 +1,11 @@
+require 'spec_helper'
+include Capybara::DSL
+
+feature "Page" do
+  let!(:page) { Page.create(body: 'Welcome', path: 'home') }
+
+  scenario "View a page" do
+    visit "/home"
+    page.should have_content('Welcome')
+  end
+end
