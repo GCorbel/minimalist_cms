@@ -1,0 +1,2 @@
+module SimpleCms
+end
