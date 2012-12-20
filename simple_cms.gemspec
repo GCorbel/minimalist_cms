@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.9"
   s.add_dependency "globalize3", "0.2.0"
+  s.add_dependency "friendly_id", "4.0.8"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

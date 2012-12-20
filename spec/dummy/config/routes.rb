@@ -1,5 +1,4 @@
 Dummy::Application.routes.draw do
-  mount SimpleCms::Engine => "/page"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

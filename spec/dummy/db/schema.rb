@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20121216194550) do
     t.string   "locale"
     t.string   "title"
     t.text     "body"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

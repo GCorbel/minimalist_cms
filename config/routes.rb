@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  match ':path', to: "pages#show"
+  match ':id', to: "pages#show"
 end

@@ -2,7 +2,7 @@ require 'spec_helper'
 include Capybara::DSL
 
 feature "Page" do
-  let!(:page) { Page.create(body: 'Welcome', path: 'home') }
+  let!(:page) { Page.create(body: 'Welcome', title: 'home') }
 
   scenario "View a page" do
     visit "/home"

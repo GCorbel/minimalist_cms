@@ -4,7 +4,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :path
       t.timestamps
     end
-    Page.create_translation_table! title: :string, body: :text
+    Page.create_translation_table! title: :string, body: :text, slug: :string
   end
 
   def down
