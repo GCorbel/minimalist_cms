@@ -8,5 +8,5 @@ class Page < ActiveRecord::Base
     attr_accessible :locale
   end
 
-  friendly_id :title, use: :slugged
+  friendly_id :title, use: [:slugged, :globalize]
 end
