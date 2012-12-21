@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121220011826) do
+ActiveRecord::Schema.define(:version => 20121221011533) do
 
   create_table "page_translations", :force => true do |t|
     t.integer  "page_id"
@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(:version => 20121220011826) do
     t.string   "title"
     t.text     "body"
     t.string   "slug"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "meta_keywords"
+    t.text     "meta_description"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   add_index "page_translations", ["locale"], :name => "index_page_translations_on_locale"
