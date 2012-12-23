@@ -19,6 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "globalize3", "0.2.0"
   s.add_dependency "friendly_id", "4.0.8"
   s.add_dependency "inherited_resources", "1.3.1"
+  s.add_dependency "backbone-on-rails", "0.9.2.1"
+  s.add_dependency "jquery-ui-rails", "2.0.2"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

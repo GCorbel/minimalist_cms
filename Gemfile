@@ -15,8 +15,6 @@ gem "jquery-rails"
 
 # To use debugger
 # gem 'debugger'
-gem 'jquery-ui-rails'
-gem 'backbone-on-rails'
 gem 'ckeditor', git: 'git://github.com/lafeber/ckeditor.git'
 gem 'frontendeditor_ckeditor', github: 'GCorbel/frontendeditor_ckeditor'
 gem 'frontendeditor', github: 'GCorbel/frontendeditor'
