@@ -11,6 +11,10 @@ class PagesController < InheritedResources::Base
   private
 
   def find_page
-    @page = Page.find_by_slug(params[:id])
+    @page = if params[:id].present?
+      Page.find_by_slug(params[:id])
+    else
+      Page.find_by_home(true)
+    end
   end
 end

@@ -19,5 +19,13 @@ describe PagesController do
         }.should raise_error(ActionController::RoutingError)
       end
     end
+
+    context "when the path searched is empty" do
+      it 'find the home page' do
+        page.update_attribute(:home, true)
+        Page.should_receive(:find_by_home).with(true).and_return(page)
+        get :show, id: ''
+      end
+    end
   end
 end
