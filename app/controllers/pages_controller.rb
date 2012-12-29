@@ -3,7 +3,7 @@ class PagesController < InheritedResources::Base
   before_filter :find_page, only: [:show, :edit, :update]
 
   respond_to :json, only: :update
-  respond_to :js, only: [:edit, :new]
+  respond_to :js, only: [:edit, :new, :create]
 
   def show
     raise ActionController::RoutingError.new('Page Not Found') if @page.nil?
@@ -13,11 +13,21 @@ class PagesController < InheritedResources::Base
     page_attributes = params[:page]
     page_attributes.merge!(body: 'New Page')
     @page = Page.create(page_attributes)
-    redirect_to "/#{@page.slug}"
+    create! do |success, failure|
+      success.js do
+        render js: "window.location.href = '/#{@page.slug}'"
+      end
+      failure.js { render :new }
+    end
   end
 
   def update
-    update! { "/#{@page.slug}" }
+    update! do |success, failure|
+      success.js do
+        render js: "window.location.href = '/#{@page.slug}'"
+      end
+      failure.js { render :edit }
+    end
   end
 
   private

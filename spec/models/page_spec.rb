@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe Page do
+  it { should validate_presence_of(:title) }
+  it { should validate_uniqueness_of(:title) }
+
   describe :set_home_page do
     let(:page1) { Page.create }
     let(:page2) { Page.create }

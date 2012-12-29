@@ -1,6 +1,8 @@
 class Page < ActiveRecord::Base
   extend FriendlyId
 
+  validates :title, presence: true, uniqueness: true
+
   attr_accessible :title, :body, :home, :meta_keywords, :meta_description
   translates :title, :body, :slug, :meta_keywords, :meta_description
 

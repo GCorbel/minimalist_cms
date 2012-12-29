@@ -1,2 +1,5 @@
+if($('#modalContainer').children().length != 0) {
+  $('#modalContainer').children().first().modal('hide')
+}
 $('#modalContainer').html("<%= j(render('form', title: 'Ajouter une page')) %>")
 $('#modalContainer').children().first().modal()
