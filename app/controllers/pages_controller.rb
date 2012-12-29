@@ -1,6 +1,6 @@
 class PagesController < InheritedResources::Base
 
-  before_filter :find_page
+  before_filter :find_page, only: [:show, :edit, :update]
 
   respond_to :json, only: :update
   respond_to :js, only: [:edit, :new]
