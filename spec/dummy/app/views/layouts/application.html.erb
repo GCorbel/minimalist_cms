@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dummy</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <script type="text/template" id="frontend_toolbar">
-    <footer>
-      <a class="editing-mode">Mode edition</a>
-      <a class="save">Sauvegarder</a>
-      <a class="cancel">Annuler</a>
-      <% if @page %>
-        <%= link_to 'Modifier la page', edit_page_path(@page), remote: true %>
-      <% end %>
-      <%= link_to 'Ajouter une page', new_page_path, remote: true %>
-    </footer>
-  </script>
-</head>
-<body>
+  <head>
+    <title>Dummy</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'simple_cms/toolbar' %>
 
-<div id="modalContainer">
+    <%= yield %>
 
-</div>
-
-<%= yield %>
-
-</body>
+  </body>
 </html>
