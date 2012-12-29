@@ -9,10 +9,6 @@ class PagesController < InheritedResources::Base
     raise ActionController::RoutingError.new('Page Not Found') if @page.nil?
   end
 
-  def new
-    @page = Page.new
-  end
-
   def create
     page_attributes = params[:page]
     page_attributes.merge!(body: 'Nouvelle Page')
