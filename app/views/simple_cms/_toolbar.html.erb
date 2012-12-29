@@ -1,12 +1,12 @@
 <script type="text/template" id="frontend_toolbar">
   <footer>
-  <a class="editing-mode">Mode edition</a>
-  <a class="save">Sauvegarder</a>
-  <a class="cancel">Annuler</a>
+  <a class="editing-mode">Edition mod</a>
+  <a class="save">Save</a>
+  <a class="cancel">Cancel</a>
   <% if @page %>
-    <%= link_to 'Modifier la page', edit_page_path(@page), remote: true %>
+    <%= link_to 'Edit the page', edit_page_path(@page), remote: true %>
   <% end %>
-  <%= link_to 'Ajouter une page', new_page_path, remote: true %>
+  <%= link_to 'Create a page', new_page_path, remote: true %>
   </footer>
 </script>
 

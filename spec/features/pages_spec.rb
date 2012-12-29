@@ -18,24 +18,24 @@ feature "Page" do
 
   scenario "Create a new page", true, js: true do
     visit "/home"
-    click_on "Ajouter une page"
+    click_on "Create a page"
     sleep 1
-    fill_in("Titre", with: "New Page")
+    fill_in("Title", with: "New Page")
     fill_in("Description (SEO)", with: "Description")
-    fill_in("Mots clés (SEO)", with: "Keywords")
-    click_button "Sauvegarder"
+    fill_in("Keywords (SEO)", with: "Keywords")
+    click_button "Save"
     current_path.should == "/new-page"
-    page.should have_content("Nouvelle Page")
+    page.should have_content("New Page")
   end
 
   scenario "Update a page", true, js: true do
     visit "/home"
-    click_on "Modifier la page"
+    click_on "Edit the page"
     sleep 1
-    fill_in("Titre", with: "New Page")
+    fill_in("Title", with: "New Page")
     fill_in("Description (SEO)", with: "Description")
-    fill_in("Mots clés (SEO)", with: "Keywords")
-    click_button "Sauvegarder"
+    fill_in("Keywords (SEO)", with: "Keywords")
+    click_button "Save"
     current_path.should == "/new-page"
     page.should have_content("Welcome")
   end

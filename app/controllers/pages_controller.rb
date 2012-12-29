@@ -11,7 +11,7 @@ class PagesController < InheritedResources::Base
 
   def create
     page_attributes = params[:page]
-    page_attributes.merge!(body: 'Nouvelle Page')
+    page_attributes.merge!(body: 'New Page')
     @page = Page.create(page_attributes)
     redirect_to "/#{@page.slug}"
   end
