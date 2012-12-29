@@ -1,5 +1,6 @@
 //= require ckeditor/init_ckeditor
 //= require frontend_editor/frontend_editor
+//= require twitter/bootstrap
 
 #Send the csrf token before an ajax send for rails
 $.ajaxSetup

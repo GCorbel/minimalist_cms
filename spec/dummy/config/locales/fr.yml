@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    attributes:
+      models:
+        page: "Page"
+      page:
+        title: "Titre"
+        meta_description: "Description (SEO)"
+        meta_keywords: "Mots clés (SEO)"

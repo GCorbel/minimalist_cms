@@ -21,6 +21,9 @@ Gem::Specification.new do |s|
   s.add_dependency "inherited_resources", "1.3.1"
   s.add_dependency "backbone-on-rails", "0.9.2.1"
   s.add_dependency "jquery-ui-rails", "2.0.2"
+  s.add_dependency "simple_form", "2.0.4"
+  s.add_dependency "twitter-bootstrap-rails"
+  s.add_dependency "capybara-firebug"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

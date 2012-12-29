@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
   extend FriendlyId
 
-  attr_accessible :title, :body, :home
+  attr_accessible :title, :body, :home, :meta_keywords, :meta_description
   translates :title, :body, :slug, :meta_keywords, :meta_description
 
   Globalize::ActiveRecord::Translation.class_eval do
