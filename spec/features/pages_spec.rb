@@ -16,7 +16,7 @@ feature "Page" do
     page.should have_content('Welcome')
   end
 
-  scenario "Create a new page", firebug: true, js: true do
+  scenario "Create a new page", true, js: true do
     visit "/home"
     click_on "Ajouter une page"
     sleep 1
@@ -26,5 +26,17 @@ feature "Page" do
     click_button "Sauvegarder"
     current_path.should == "/new-page"
     page.should have_content("Nouvelle Page")
+  end
+
+  scenario "Update a page", true, js: true do
+    visit "/home"
+    click_on "Modifier la page"
+    sleep 1
+    fill_in("Titre", with: "New Page")
+    fill_in("Description (SEO)", with: "Description")
+    fill_in("Mots clés (SEO)", with: "Keywords")
+    click_button "Sauvegarder"
+    current_path.should == "/new-page"
+    page.should have_content("Welcome")
   end
 end
