@@ -28,4 +28,12 @@ describe PagesController do
       end
     end
   end
+
+  describe :publish do
+    it "publish a unpublished page" do
+      Page.stub(:find_by_slug).and_return(page)
+      page.should_receive(:update_attribute).with(:draft, false)
+      get :publish, id: 'test', format: :json
+    end
+  end
 end

@@ -5,6 +5,7 @@
   <a class="cancel">Cancel</a>
   <% if @page %>
     <%= link_to 'Edit the page', edit_page_path(@page), remote: true %>
+    <%= link_to 'Publish', publish_page_path(@page), remote: true %>
   <% end %>
   <%= link_to 'Create a page', new_page_path, remote: true %>
   </footer>
