@@ -1,8 +1,8 @@
 class PagesController < InheritedResources::Base
 
-  before_filter :find_page, only: [:show, :edit, :update, :publish]
+  before_filter :find_page, only: [:show, :edit, :update, :publish, :unpublish, :home]
 
-  respond_to :json, only: [:update, :publish]
+  respond_to :json, only: [:update, :publish, :unpublish, :home]
   respond_to :js, only: [:edit, :new, :create]
 
   def show
@@ -32,6 +32,16 @@ class PagesController < InheritedResources::Base
 
   def publish
     @page.update_attribute(:draft, false)
+    render json: @page
+  end
+
+  def unpublish
+    @page.update_attribute(:draft, true)
+    render json: @page
+  end
+
+  def home
+    Page.set_home_page(@page)
     render json: @page
   end
 

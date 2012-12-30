@@ -6,6 +6,11 @@
   <% if @page %>
     <%= link_to 'Edit the page', edit_page_path(@page), remote: true %>
     <%= link_to 'Publish', publish_page_path(@page), remote: true %>
+    <%= link_to 'Unpublish', unpublish_page_path(@page), remote: true %>
+    <%= link_to 'Mark a home page',
+      home_page_path(@page),
+      remote: true,
+      confirm: 'Are you sure?' %>
   <% end %>
   <%= link_to 'Create a page', new_page_path, remote: true %>
   </footer>
