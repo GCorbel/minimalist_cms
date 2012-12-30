@@ -16,18 +16,18 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.2.9"
-  s.add_dependency "globalize3", "0.3.0"
-  s.add_dependency "friendly_id", "4.0.8"
-  s.add_dependency "inherited_resources", "1.3.1"
-  s.add_dependency "backbone-on-rails", "0.9.2.1"
-  s.add_dependency "jquery-ui-rails", "2.0.2"
-  s.add_dependency "simple_form", "2.0.4"
-  s.add_dependency "twitter-bootstrap-rails"
-  s.add_dependency "capybara-firebug"
+  s.add_dependency "globalize3", ">= 0.3.0"
+  s.add_dependency "friendly_id", ">= 4.0.0"
+  s.add_dependency "inherited_resources", ">= 1.3.0"
+  s.add_dependency "backbone-on-rails", ">= 0.9.2.0"
+  s.add_dependency "jquery-ui-rails", ">= 2.0.0"
+  s.add_dependency "simple_form", ">= 2.0.0"
+  s.add_dependency "twitter-bootstrap-rails", ">= 2.0.0"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "capybara"
   s.add_development_dependency "database_cleaner"
   s.add_development_dependency "shoulda"
+  s.add_development_dependency "capybara-firebug"
 end
