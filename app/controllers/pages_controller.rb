@@ -1,6 +1,6 @@
 class PagesController < InheritedResources::Base
 
-  before_filter :find_page, only: [:show, :edit, :update, :publish, :unpublish, :home]
+  before_filter :find_page, only: [:show, :edit, :update, :publish, :unpublish, :home, :destroy]
 
   respond_to :json, only: [:update, :publish, :unpublish, :home]
   respond_to :js, only: [:edit, :new, :create]
@@ -28,6 +28,11 @@ class PagesController < InheritedResources::Base
       end
       failure.js { render :edit }
     end
+  end
+
+  def destroy
+    @page.delete
+    redirect_to root_url
   end
 
   def publish

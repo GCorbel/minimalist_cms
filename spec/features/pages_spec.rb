@@ -3,7 +3,7 @@ require 'spec_helper'
 include Capybara::DSL
 
 feature "Page" do
-  let!(:page) { Page.create(body: 'Welcome', title: 'home') }
+  let!(:home_page) { Page.create(body: 'Welcome', title: 'home') }
 
   scenario "View a page" do
     visit "/home"
@@ -11,7 +11,7 @@ feature "Page" do
   end
 
   scenario "View the home page" do
-    page.update_attribute(:home, true)
+    home_page.update_attribute(:home, true)
     visit "/"
     page.should have_content('Welcome')
   end
@@ -38,5 +38,13 @@ feature "Page" do
     click_button "Save"
     current_path.should == "/new-page"
     page.should have_content("Welcome")
+  end
+
+  scenario "Destroy a page", js: true do
+    Page.create(body: 'Second Page', title: 'second page')
+    visit "/second-page"
+    click_on "Delete the page"
+    page.driver.browser.switch_to.alert.accept
+    current_path.should == "/"
   end
 end
