@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-ui-rails", ">= 2.0.0"
   s.add_dependency "simple_form", ">= 2.0.0"
   s.add_dependency "twitter-bootstrap-rails", ">= 2.0.0"
+  s.add_dependency "frontendeditor_ckeditor"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
