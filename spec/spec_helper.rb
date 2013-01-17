@@ -5,7 +5,6 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
 require 'database_cleaner'
-require 'capybara/firebug'
 require 'shoulda'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
