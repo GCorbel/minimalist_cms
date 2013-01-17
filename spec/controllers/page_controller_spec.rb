@@ -28,28 +28,4 @@ describe PagesController do
       end
     end
   end
-
-  describe :publish do
-    it "publish a unpublished page" do
-      Page.stub(:find_by_slug).and_return(page)
-      page.should_receive(:update_attribute).with(:draft, false)
-      put :publish, id: 'test', format: :json
-    end
-  end
-
-  describe :unpublish do
-    it "unpublish a published page" do
-      Page.stub(:find_by_slug).and_return(page)
-      page.should_receive(:update_attribute).with(:draft, true)
-      put :unpublish, id: 'test', format: :json
-    end
-  end
-
-  describe :home do
-    it "unpublish a published page" do
-      Page.stub(:find_by_slug).and_return(page)
-      Page.should_receive(:set_home_page).with(page)
-      put :home, id: 'test', format: :json
-    end
-  end
 end
