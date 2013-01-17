@@ -17,9 +17,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.11"
   s.add_dependency "inherited_resources", ">= 1.3.0"
-  s.add_dependency "jquery-ui-rails", ">= 2.0.0"
-  s.add_dependency "simple_form", ">= 2.0.0"
-  s.add_dependency "twitter-bootstrap-rails", ">= 2.0.0"
   s.add_dependency "frontendeditor_ckeditor"
   s.add_dependency "acts_as_page"
 

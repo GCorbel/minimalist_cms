@@ -1,6 +1,5 @@
 //= require ckeditor/init_ckeditor
 //= require frontend_editor/frontend_editor
-//= require twitter/bootstrap
 
 #Init the backbone application when jQuery is ready
 $(document).ready ->
