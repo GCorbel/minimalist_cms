@@ -1,4 +1,3 @@
-require 'inherited_resources'
 require 'acts_as_page'
 require 'frontendeditor_ckeditor'
 

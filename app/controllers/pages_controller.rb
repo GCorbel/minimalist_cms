@@ -1,4 +1,4 @@
-class PagesController < InheritedResources::Base
+class PagesController < ApplicationController
 
   respond_to :json
 
@@ -9,5 +9,11 @@ class PagesController < InheritedResources::Base
       Page.find_by_home(true)
     end
     raise ActionController::RoutingError.new('Page Not Found') if @page.nil?
+  end
+
+  def update
+    @page = Page.find(params[:id])
+    @page.update_attributes(params[:page])
+    render json: @page
   end
 end

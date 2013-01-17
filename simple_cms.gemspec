@@ -16,7 +16,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.2.11"
-  s.add_dependency "inherited_resources", ">= 1.3.0"
   s.add_dependency "frontendeditor_ckeditor"
   s.add_dependency "acts_as_page"
 
