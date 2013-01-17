@@ -15,15 +15,14 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 3.2.9"
-  s.add_dependency "globalize3", ">= 0.3.0"
-  s.add_dependency "friendly_id", ">= 4.0.0"
+  s.add_dependency "rails", "~> 3.2.11"
   s.add_dependency "inherited_resources", ">= 1.3.0"
   s.add_dependency "backbone-on-rails", ">= 0.9.2.0"
   s.add_dependency "jquery-ui-rails", ">= 2.0.0"
   s.add_dependency "simple_form", ">= 2.0.0"
   s.add_dependency "twitter-bootstrap-rails", ">= 2.0.0"
   s.add_dependency "frontendeditor_ckeditor"
+  s.add_dependency "acts_as_page"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
