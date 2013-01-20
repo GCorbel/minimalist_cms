@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require
-require "simple_cms"
+require "minimalist_cms"
 
 module Dummy
   class Application < Rails::Application

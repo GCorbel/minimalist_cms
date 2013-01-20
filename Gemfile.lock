@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_cms (0.0.1)
+    minimalist_cms (0.0.1)
       acts_as_page
       frontendeditor_ckeditor
       rails (~> 3.2.11)
@@ -186,5 +186,5 @@ DEPENDENCIES
   jquery-rails
   rspec-rails
   shoulda
-  simple_cms!
+  minimalist_cms!
   sqlite3

@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :simple_cms do
+# task :minimalist_cms do
 #   # Task goes here
 # end

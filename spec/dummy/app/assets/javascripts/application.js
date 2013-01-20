@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require simple_cms/simple_cms
+//= require minimalist_cms/minimalist_cms
 //= require_tree .
