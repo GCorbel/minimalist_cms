@@ -13,6 +13,8 @@ What this cms is doing for
 
 This gem is integrable with any tool. It is just a page model with an editor. See the section Tool suggested to have some ideas.
 
+The goal is to use a simple CMS which simply manage pages and use the powerful of rails to manage other part of a website like the contact page, images, etc. It's also good to use the strength of other tool.
+
 Installation
 ------------
 
@@ -59,9 +61,9 @@ Add something like this in you controller :
 
 Now, you can edit the file `app/views/welcome/index.html` and add this :
 
-    `<%= editable @page { @page.body } %>`
+    <%= editable @page { @page.body } %>
 
 Tool suggested
 --------------
 
-With this gem, you can use [ActiveAdmin](https://github.com/gregbell/active_admin) and [activeadmin-globalize3](https://github.com/stefanoverna/activeadmin-globalize3). You can also use cancan. Your free to use anything you want.
+With this gem, you can use [ActiveAdmin](https://github.com/gregbell/active_admin) and [activeadmin-globalize3](https://github.com/stefanoverna/activeadmin-globalize3). You can also use [cancan](https://github.com/ryanb/cancan). Your free to use anything you want.
