@@ -20,7 +20,21 @@ Installation
 
 1. Add `minimalist_cms` in your Gemfile;
 2. Run `rake minimalist_cms_engine:install:migrations db:migrate`;
-3. The javascript file minamlist_cms/minimalist_cms and the css file minamlist_cms/minimalist_cms to have access to the editor. Include them when the use is an admin;
+3. Create a new file `app\assets\javascripts\minimalist_cms` like this :
+    
+    ```
+    //= require jquery
+    //= require jquery_ujs
+    //= require underscore
+    //= require backbone
+    //= require jquery.ui.effect-highlight.js
+    //= require ckeditor/init_ckeditor
+    //= require frontend_editor/frontend_editor
+    //= require minimalist_cms/minimalist_cms
+    ```
+    You must to add only the libraries you don't have included yet;
+
+4. The the css file minamlist_cms/minimalist_cms to have access to the editor. Include them when the use is an admin;
 
 Usage
 -----
@@ -30,7 +44,7 @@ You can create a page which your favorite administration tool.
 This is an example :
 
 1. Run `rails console`;
-1. Execute `Page.create(title: 'welcome', body: 'this is a welcome page')`;
+2. Execute `Page.create(title: 'welcome', body: 'this is a welcome page')`;
 
 Now, you can go to this address : `localhost:3000/welcome` To edit the page, include the css and javascript file a mark in the installation section. You should have a toolbar which hillight the editable section. When you click on a section, an editor appear. Modify the text like you want;
 
